@@ -8,25 +8,25 @@ from flask import send_from_directory
 
 
 
-app = Flask(__name__, static_url_path='/static')
+bookroulette = Flask(__name__, static_url_path='/static')
 
 
 
 
 
-@app.route('/')
+@bookroulette.route('/')
 def welcome():
     return 'Welcome to the server'
 
-@app.route('/books')
+@bookroulette.route('/books')
 def books():
     return render_template("main.html")
 
-@app.route('/favicon.ico')
+@bookroulette.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
        
-@app.route('/roulette', methods=['POST', 'GET'])
+@bookroulette.route('/roulette', methods=['POST', 'GET'])
 def roulette():
     f = open("GutProject.txt", "w")
     for x in range(1):
@@ -37,4 +37,4 @@ def roulette():
        
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    bookroulette.run(debug=True)
