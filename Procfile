@@ -1,1 +1,1 @@
-web: gunicorn run:bookroulette
+web: gunicorn run:app
