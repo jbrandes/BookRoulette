@@ -1,3 +1,4 @@
 
 Flask==1.0.2
 Gutenberg==0.7.0
+gunicorn==19.9.0
