@@ -48,7 +48,7 @@ def roulette():
         client = boto3.client('s3')
         response = client.put_object( 
            Bucket='book-roulette',
-           Body='book',
+           Body= book,
            Key='files/GutProject.txt')
         return Response(
                    file['Body'].read(),
