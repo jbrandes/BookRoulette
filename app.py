@@ -24,7 +24,7 @@ def get_client():
         aws_secret_access_key='hI+rY8VF6zG6LOKZ+ShdIPzEJGBipHrtwM0of1wV'
     )
 
-
+s3 = get_client()
 
 
 @app.route('/')
@@ -38,7 +38,7 @@ def favicon():
        
 @app.route('/roulette', methods=['POST', 'GET'])
 def roulette():
-    s3 = get_client()
+    get_client()
     file = s3.get_object(Bucket='book-roulette', Key='files/GutProject.txt')
     f = open("GutProject.txt", "w")
     for x in range(1):
