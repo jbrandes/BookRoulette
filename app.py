@@ -49,6 +49,11 @@ def roulette():
            Bucket='book-roulette',
            Body='book',
            Key='files/GutProject.txt')
+           return Response(
+               file['Body'].read(),
+               mimetype='text/plain',
+               headers={"Content-Disposition": "attachment;filename=GutProject.txt"}
+    )
         return render_template("main.html")
         
 
