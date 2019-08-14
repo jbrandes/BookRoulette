@@ -20,8 +20,8 @@ def get_client():
     return client(
         's3',
         'us-east-1',
-        aws_access_key_id='AKIAT2WU5IJC57E53KM6',
-        aws_secret_access_key='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'
+        aws_access_key_id='XXXXXX',
+        aws_secret_access_key='XXXXXXX'
     )
 
 s3 = get_client()
