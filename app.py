@@ -39,6 +39,7 @@ def favicon():
 @app.route('/roulette', methods=['POST', 'GET'])
 def roulette():
     s3 = get_client()
+    file = s3.get_object(Bucket='book-roulette', Key='files/GutProject.txt')
     f = open("GutProject.txt", "w")
     for x in range(1):
         y = (random.randint(0, 59000))
