@@ -54,7 +54,7 @@ def roulette():
                mimetype='text/plain',
                headers={"Content-Disposition": "attachment;filename=GutProject.txt"}
     )
-        return render_template("main.html")
+        
         
 
 if __name__ == '__main__':
