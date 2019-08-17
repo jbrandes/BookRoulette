@@ -1,16 +1,2 @@
-Cython==0.28.2
 Gutenberg==0.7.0
-gunicorn==19.9.0
 Flask==1.0.2
-numpy==1.14.3
-Werkzeug==0.14.1
-lxml==4.2.1
-pyOpenSSL==19.0.0
-brotli==1.0.7
-Django==2.2.4
-protobuf==3.9.1
-ipaddr==2.2.0
-keyring==19.0.2
-ordereddict==1.1
-usercustomize==1.0.0
-wincertstore==0.2
