@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from gutenberg.acquire import load_etext
 from gutenberg.cleanup import strip_headers
 import random
+from random import *
 import os 
 from flask import Flask, request
 from flask import Flask, Response
