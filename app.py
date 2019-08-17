@@ -6,6 +6,7 @@ import os
 from flask import Flask, request
 from flask import Flask, Response
 from flask import send_file, send_from_directory, safe_join, abort
+import webbrowser
 
 
 
@@ -15,7 +16,7 @@ app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def home():
-    render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route('/favicon.ico')
@@ -29,7 +30,7 @@ def roulette():
         y = (random.randint(0, 59000))
         text = strip_headers(load_etext(y)).strip()
         f.write(text)
-        pass
+        return render_template('index.html')
         
     
     
