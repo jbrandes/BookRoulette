@@ -14,6 +14,7 @@ app = Flask(__name__, static_url_path='/static')
 
 
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -30,7 +31,12 @@ def roulette():
         y = (random.randint(0, 59000))
         text = strip_headers(load_etext(y)).strip()
         f.write(text)
-        return render_template('index.html')
+    return send_file('GutProject.txt',
+    mimetype='text/plain',
+    attachment_filename='GutProject.txt',
+    as_attachment=True)
+       
+
         
     
     
