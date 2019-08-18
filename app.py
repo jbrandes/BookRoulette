@@ -27,7 +27,7 @@ def favicon():
 @app.route('/button', methods=['POST', 'GET'])
 def roulette():
     with open("GutProject.txt", "w") as f:
-        x = (random.randint(1, 590))
+        x = (random.randint(1, 5900))
         text = strip_headers(load_etext(x)).strip()
         f.write(text)
         f.close()
