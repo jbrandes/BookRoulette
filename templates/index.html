@@ -1,5 +1,8 @@
 
-  	
+    
+
+ 
+
 <html>
 <head>
 <link rel="icon" href="data:,">
@@ -8,18 +11,19 @@
 <style>
     h1 {
         text-align: center; 
-        color: blue;
+        color: #9C0707;
     }
     h2 {
         text-align: center; 
         font-style: italic;
-        color: blue;
+        color: #9C0707;
         
     }
     
     h3 {
         
         text-align: center;
+        color: #9C0707;
     }
     body {
         background-color: powderblue;
@@ -48,23 +52,38 @@
         
         
     }
+
+    body {
+
+        background-image: url(/static/images/col.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+       
+
+        
+}
     
 
  
 
-   .border {
 
-  	color: white;
+
+   .textborder {
+
+  	color: black;
+        border-style: solid;
+        border-width:4px;
+        background-color: white;
       
 
 
 }
 </style>
-<div class="border">
+<div class="textborder">
 <h1>Book Roulette</h1>
 <h2>Discover Something New</h2>
 <h3>Click the image to get a surprise book</h3>
-
+</div>
 <form action="/button" method="post">
 <button type="submit" class="button"></button>
 </form>
@@ -74,6 +93,13 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
