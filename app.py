@@ -7,6 +7,8 @@ from flask import Flask, request
 from flask import Flask, Response
 from flask import send_file, send_from_directory, safe_join, abort
 import webbrowser
+from docx import Document
+from cStringIO import StringIO
 
 
 
