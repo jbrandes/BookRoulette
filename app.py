@@ -7,8 +7,7 @@ from flask import Flask, request
 from flask import Flask, Response
 from flask import send_file, send_from_directory, safe_join, abort
 import webbrowser
-from docx import Document
-from cStringIO import StringIO
+
 
 
 
@@ -29,7 +28,7 @@ def favicon():
 @app.route('/button', methods=['POST', 'GET'])
 def roulette():
     with open("GutProject.txt", "w") as f:
-        x = (random.randint(1, 5900))
+        x = (random.randint(1, 60059))
         text = strip_headers(load_etext(x)).strip()
         f.write(text)
         f.close()
