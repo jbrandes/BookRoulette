@@ -44,7 +44,7 @@ def tab():
         book = strip_headers(load_etext(x)).strip()
         f.write(book)
         f.close()
-        webbrowser.open_new_tab('BookRoulette.html')
+        return webbrowser.open_new_tab('BookRoulette.html')
     
         
     
