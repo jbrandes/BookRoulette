@@ -7,8 +7,7 @@ from flask import Flask, request
 from flask import Flask, Response
 from flask import send_file, send_from_directory, safe_join, abort
 import webbrowser
-from docx import Document
-from io import StringIO
+
 
 
 
@@ -26,8 +25,8 @@ def home():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
        
-@app.route('/button', methods=['POST', 'GET'])
-def roulette():
+@app.route('/download', methods=['POST'])
+def download():
     with open("GutProject.doc", "w") as f:
         x = (random.randint(1, 60059))
         text = strip_headers(load_etext(x)).strip()
@@ -37,9 +36,16 @@ def roulette():
     mimetype='application/msword',
     attachment_filename='GutProject.doc',
     as_attachment=True)
-    
        
-
+@app.route('/tab', methods=['POST'])
+def tab():
+    with open("BookRoulette.html", "w") as f:
+        x = (random.randint(1, 60059))
+        book = strip_headers(load_etext(x)).strip()
+        f.write(book)
+        f.close()
+        webbrowser.open_new_tab('BookRoulette.html')
+    
         
     
     
