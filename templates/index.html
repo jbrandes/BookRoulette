@@ -1,10 +1,7 @@
 
-    
-
- 
-
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link rel="icon" href="data:,">
 </head>
 <body>
@@ -29,35 +26,64 @@
         background-color: powderblue;
     }
     
-    .button {
+    
+    .download {
         
-        width: 300px;
-        height: 300px;
+
+        text-align: center;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        font-size: 25px;
+        margin: 0  auto;
+        background-color: red;
+        padding: 0px 45px ;
+        display: flex;
+        vertical-align: center;
+        justify-content: left;
+        line-height: 200px;
+        vertical-align: middle;
         margin-left: auto;
         margin-right: auto;
-        justify-content: center;
-        display: flex;
-        text-align: center;
-        font-size: 50px;
-        margin: auto;
-        background-color: #006400;
-        margin: 0 auto;
-        padding: 0;
-        display: flex;
-        vertical-align: middle;
-        justify-content: center;
-        line-height: 20px;
+        font-family: Sans-Serif;
        
         
         
     }
 
+
+    .tab {
+        
+        
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        font-size: 25px;
+        margin: auto;
+        background-color: blue;
+        padding: 10px 47px 47px 10px;
+        display: flex;
+        vertical-align: center;
+        justify-content: right;
+        line-height: 180px;
+        font-family: Sans-Serif;
+
+}
+
+
+
+
     body {
 
         background-image: url(/static/images/col.jpg);
-        background-position: center;
+        background-position: center center;
         background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
        
 
         
@@ -65,9 +91,7 @@
     
 
  
-
-
-
+ 
    .textborder {
 
   	color: black;
@@ -78,14 +102,19 @@
 
 
 }
+
+
 </style>
 <div class="textborder">
 <h1>Book Roulette</h1>
 <h2>Discover Something New</h2>
 <h3>Click the button to get a surprise book</h3>
 </div>
-<form action="/button" method="post">
-<button type="submit" class="button"></button>
+<form action="/download" method="post">
+<button type="submit" class="download">Download</button>
+</form>
+<form action="/tab" method="post">
+<button type="submit" class="tab">Browser</button>
 </form>
 <script>
     
@@ -93,6 +122,15 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 
