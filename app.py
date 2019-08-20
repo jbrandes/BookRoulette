@@ -43,12 +43,11 @@ def tab():
         x = (random.randint(1, 60059))
         book = strip_headers(load_etext(x)).strip()
         f.write(book)
-        f.close()
-        webbrowser.open_new('BookRoulette.html')
-    
-        
-    
-    
+        f.close
+        filename = 'file:///'+os.getcwd()+'/' + 'BookRoulette.html'
+        webbrowser.open_new_tab(filename)
+
+
         
 
 if __name__ == '__main__':
