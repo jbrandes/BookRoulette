@@ -46,7 +46,7 @@ def tab():
         f.close
         filename = 'file:///'+os.getcwd()+'/' + 'BookRoulette.html'
         webbrowser.open_new_tab(filename)
-        return 200
+        return "Success"
 
 
         
