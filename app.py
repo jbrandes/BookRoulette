@@ -45,7 +45,8 @@ def tab():
         f.write(book)
         f.close
         filename = 'file:///'+os.getcwd()+'/' + 'BookRoulette.html'
-        return webbrowser.open_new_tab(filename)
+        webbrowser.open_new_tab(filename)
+        pass
        
 
 
