@@ -1,4 +1,4 @@
-Flask==1.0.2
+Flask==2.3.2
 Gutenberg==0.7.0
 python_docx==0.8.10
 docx==0.2.4
